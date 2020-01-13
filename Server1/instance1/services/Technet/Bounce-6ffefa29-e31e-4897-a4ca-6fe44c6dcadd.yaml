@@ -1,0 +1,24 @@
+- defaultTab: summary
+  description: check and bounce Service1
+  executionEnabled: true
+  group: Server1/instance1/services/Technet
+  loglevel: INFO
+  name: Bounce
+  nodeFilterEditable: false
+  nodefilters:
+    dispatch:
+      excludePrecedence: true
+      keepgoing: false
+      rankOrder: ascending
+      successOnEmptyNodeFilter: false
+      threadcount: '1'
+    filter: 'name: remote2'
+  nodesSelectedByDefault: true
+  scheduleEnabled: true
+  sequence:
+    commands:
+    - description: bounce of technet
+      exec: . ~/.bash_profile_1 ; /opt/rundeck/bounce technet
+    keepgoing: false
+    strategy: node-first
+
