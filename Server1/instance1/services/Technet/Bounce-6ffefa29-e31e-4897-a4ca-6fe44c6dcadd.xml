@@ -22,7 +22,7 @@
     <sequence keepgoing='false' strategy='node-first'>
       <command>
         <description>bounce of technet</description>
-        <exec>. ~/.bash_profile_1 ; /opt/rundeck/bounce technet</exec>
+        <exec>. ~/.bash_profile_1 ; /opt/rundeck/bounce technet ; hostname</exec>
       </command>
     </sequence>
   </job>
