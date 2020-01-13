@@ -1,0 +1,29 @@
+<joblist>
+  <job>
+    <defaultTab>summary</defaultTab>
+    <description>check and bounce Service1</description>
+    <dispatch>
+      <excludePrecedence>true</excludePrecedence>
+      <keepgoing>false</keepgoing>
+      <rankOrder>ascending</rankOrder>
+      <successOnEmptyNodeFilter>false</successOnEmptyNodeFilter>
+      <threadcount>1</threadcount>
+    </dispatch>
+    <executionEnabled>true</executionEnabled>
+    <group>Server1/instance1/services/Technet</group>
+    <loglevel>INFO</loglevel>
+    <name>Bounce</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <nodefilters>
+      <filter>name: remote2</filter>
+    </nodefilters>
+    <nodesSelectedByDefault>true</nodesSelectedByDefault>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>bounce of technet</description>
+        <exec>. ~/.bash_profile_1 ; /opt/rundeck/bounce technet</exec>
+      </command>
+    </sequence>
+  </job>
+</joblist>
