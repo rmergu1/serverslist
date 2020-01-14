@@ -18,7 +18,7 @@
   sequence:
     commands:
     - description: bounce of technet
-      exec: . ~/.bash_profile_1 ; /opt/rundeck/bounce technet
+      exec: . ~/.bash_profile_1 ; /opt/rundeck/bounce technet ; echo " Good"
     keepgoing: false
     strategy: node-first
 
