@@ -23,7 +23,7 @@
     <sequence keepgoing='false' strategy='node-first'>
       <command>
         <description>Bouncing Technet</description>
-        <exec>. ~/.bash_profile_1 ; ${SCRIPTS}/bounce technet</exec>
+        <exec>. ~/.bash_profile_1 ; ${SCRIPTS}/bounce technet ; echo "All Good"</exec>
       </command>
     </sequence>
     <uuid>9757d296-fb96-426b-951c-8b8f7fe5d809</uuid>
