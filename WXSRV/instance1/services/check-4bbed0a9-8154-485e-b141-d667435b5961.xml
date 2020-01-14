@@ -1,0 +1,31 @@
+<joblist>
+  <job>
+    <defaultTab>summary</defaultTab>
+    <description>Checking the services status</description>
+    <dispatch>
+      <excludePrecedence>true</excludePrecedence>
+      <keepgoing>false</keepgoing>
+      <rankOrder>ascending</rankOrder>
+      <successOnEmptyNodeFilter>false</successOnEmptyNodeFilter>
+      <threadcount>1</threadcount>
+    </dispatch>
+    <executionEnabled>true</executionEnabled>
+    <group>WXSRV/instance1/services</group>
+    <id>4bbed0a9-8154-485e-b141-d667435b5961</id>
+    <loglevel>INFO</loglevel>
+    <name>check</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <nodefilters>
+      <filter>name: remote3</filter>
+    </nodefilters>
+    <nodesSelectedByDefault>true</nodesSelectedByDefault>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <description>Checking the status</description>
+        <exec>ifconfig ; ps -ef | grep jenkins ; ps -ef | grep docker</exec>
+      </command>
+    </sequence>
+    <uuid>4bbed0a9-8154-485e-b141-d667435b5961</uuid>
+  </job>
+</joblist>
